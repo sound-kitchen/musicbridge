@@ -1,0 +1,36 @@
+<div class="container">
+  <section>
+    <h1><%= @category_name %> 게시판</h1>
+    <div class="table-wrapper">
+      <table>
+        <thead>
+          <tr>
+            <th>카테고리</th>
+            <th>제목</th>
+            <th>작성자</th>
+            <th>조회수</th>
+          </tr>
+        </thead>
+      
+        <tbody>
+          <% @posts.each do |post| %>
+            <tr>
+              <td><%= post.category.name %></td>
+              <td><a href="/posts/<%= post.id %>"><%= post.title %></a></td>
+              <td><%= post.user.profile.username %></td>
+              <td></td>
+            </tr>
+          <% end %>
+        </tbody>
+      </table>
+    </div>
+  </section>
+  
+  
+  <%= link_to new_post_path do %>
+  <button type="button" class="btn btn-outline-primary">
+    <i class="fa fa-question-circle" aria-hidden="true">&ensp;나도 의뢰하기</i>
+    <!--여기 카테고리 파람스 넘기는 거 해야돼-->
+  </button>
+  <% end %>
+</div>

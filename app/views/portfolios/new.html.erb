@@ -1,0 +1,13 @@
+<div class="container">
+    <header class="new_port_header p-4">
+        <h1 class="new_port_title">New Portfolio</h1>
+    </header>
+
+    <%= render 'form', portfolio: @portfolio %>
+    
+    
+    <div class="row justify-content-end">
+        <%= link_to 'Back', portfolios_path, class: "btn btn-secondary" %>
+    </div>
+</div>
+

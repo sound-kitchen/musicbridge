@@ -1,0 +1,54 @@
+<!--<div class="container">-->
+    <div class="portfolio-box">
+      
+    <div class="container py-3">
+       <div class="portfolio-text clearfix row justify-content-center">
+          <div class="portfolio-btn float-left badge badge-pill badge-default" onclick="window.location.href='../posts/';">전체</div>
+          <div class="portfolio-btn float-left badge badge-pill badge-default" onclick="window.location.href='../movie/';">영화</div>
+          <div class="portfolio-btn float-left badge badge-pill badge-default" onclick="window.location.href='../video/';">영상</div>
+          <div class="portfolio-btn float-left badge badge-pill badge-default" onclick="window.location.href='../game/';">게임</div>
+          <div class="portfolio-btn float-left badge badge-pill badge-default" onclick="window.location.href='../hiphopedm/';">힙합/EDM</div>
+      </div>
+      <div class="portfolio-text clearfix row justify-content-center">
+          <div class="portfolio-btn float-left badge badge-pill badge-default" onclick="window.location.href='../pop/';">가요</div>
+          <div class="portfolio-btn float-left badge badge-pill badge-default" onclick="window.location.href='../stage/';">공연</div>
+          <div class="portfolio-btn float-left badge badge-pill badge-default" onclick="window.location.href='../religious/';">종교</div>
+          <div class="portfolio-btn float-left badge badge-pill badge-default" onclick="window.location.href='../arrangement/';">편곡</div>
+          <div class="portfolio-btn float-left badge badge-pill badge-default" onclick="window.location.href='../session/';">세션</div>
+      </div> 
+    </div>  
+     
+      
+        <div class="container">
+            <p class="popular-portfolio">인기 제작자</p><hr id="popular-hr">
+            
+            <div class="cards row py-3">
+              <% @portfolios.each do |portfolio| %>
+                <% if portfolio.title.nil? %>
+                <% else %>
+                  <div class="col-12 col-md-4">
+                    <div class="card mb-3 mb-md-0">
+                        <a href="#" class="card-img_container d-flex justify-content-center align-items center">
+                            <img class="card-img-top" src="<%= portfolio.user.profile.pf_image.url %>" alt>
+                        </a>
+                        <div class="card-block">
+                            <h4 class="card-title mb-2"><%= portfolio.user.profile.username %></h4>
+                            <p class="card-text"><%= portfolio.title %></p>
+                            <%= link_to '자세히 보기', portfolio, class: "btn btn-primary" %>
+                        </div>
+                    </div>        
+                </div>
+                <% end %>
+              <% end %>
+            </div>
+            <% if user_signed_in? %>
+              <% if current_user.portfolio.title? %>
+              <% else %>
+                <div class="row justify-content-end mr-1">
+                  <%= link_to '나도 제작자 할래요', edit_portfolio_path(@myportfolio), class: "btn btn-secondary" %>
+                </div>
+              <% end %>
+            <% end %>
+        </div>
+  </div>
+<!--</div>-->

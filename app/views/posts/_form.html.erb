@@ -1,0 +1,48 @@
+<%= form_for(post) do |f| %>
+  <% if post.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(post.errors.count, "error") %> prohibited this post from being saved:</h2>
+
+      <ul>
+      <% post.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+  
+  <div class="field form-group row justify-content-center post_form">
+    <%= f.label :title, class: "col-3 col-md-2 col-form-label post_form_label" %>
+    <%= f.text_field :title, class: "col-9 col-md-10 form-control" %>
+  </div>
+
+  <div class="field form-group row justify-content-center post_form">
+    <%= f.label :content, class: "col-3 col-md-2 col-form-label post_form_label" %>
+    <%= f.text_area :content, class: "col-9 col-md-10 form-control" %>
+  </div>
+
+  <div class="field form-group row justify-content-center post_form">
+    <%= f.label :budget, class: "col-3 col-md-2 col-form-label post_form_label" %>
+    <%= f.number_field :budget, step: 5000, class: "col-9 col-md-10 form-control" %>
+  </div>
+
+  <div class="field form-group row post_form">
+    <%= f.label :d_day, class: "col-3 col-md-2 col-form-label post_form_label" %>
+    <%= f.date_select :d_day, class: "col-9 col-md-10 form-control" %>
+     <!--<input class="form-control" type="date" value="2011-08-19" id="example-date-input">-->
+  </div>
+
+  <div class="field form-group row justify-content-center post_form">
+    <%= f.label :image, class: "col-3 col-md-2 col-form-label post_form_label" %>
+    <%= f.file_field :image, class: "col-9 col-md-10 form-control" %>
+  </div>
+  
+  <div class="field form-group row post_form">
+    <%= f.label :category, class: "col-3 col-md-2 col-form-label post_form_label" %>
+    <%= f.collection_select :category_id, Category.all, :id, :name, prompt: true, class: "col-9 col-md-10 form-control" %>
+  </div>
+
+  <div class="actions row justify-content-center">
+    <%= f.submit %>
+  </div>
+<% end %>

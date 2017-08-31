@@ -1,0 +1,51 @@
+<div class="container">
+<p class="row justify-content-center profile_list">
+  <strong class="col-3 offset-2 profile_label">Email</strong>
+  <span class="col-7">
+    <%= @profile.user.email %>
+  </span>
+</p>
+
+<p class="row justify-content-center profile_list">
+  <strong class="col-3 offset-2 profile_label">Username</strong>
+  <span class="col-7">
+    <%= @profile.username %>
+  </span>
+</p>
+
+<p class="row justify-content-center profile_list">
+  <strong class="col-3 offset-2 profile_label">프로필 이미지</strong>
+  <span class="col-7">
+    <% if @profile.pf_image.url %>
+      <img src="<%= @profile.pf_image.thumb.url %>" alt="profile image">
+    <% else %>
+      <span>이미지없음</span>  
+    <% end %>
+  </span>
+</p>
+
+<p class="row justify-content-center profile_list">
+  <strong class="col-3 offset-2 offset-md-2 profile_label">전화번호</strong>
+  <span class="col-7">
+    <%= @profile.number %>
+  </span>
+</p>
+
+  
+  <%#= render 'profiles/show', profile: @profile %>
+  
+  <div class="row justify-content-center">
+    <!--<a href="/profile/edit/<%#= @profile.id %>" class="btn btn-secondary mx-1">프로필 수정</a>-->
+    <%= link_to '프로필 수정', edit_profile_path, class: "btn btn-secondary mx-1" %>
+  
+  
+    <% if @portfolio.title.nil? %>
+      <%= link_to "제작자 등록", edit_portfolio_path(@portfolio), class: "btn btn-secondary mx-1" %>
+    <% else %>
+      <%= link_to "내 포트폴리오 보기", @portfolio, class: "btn btn-secondary mx-1" %>
+    <% end %>
+  
+    <%= link_to 'Back', root_path, class: "btn btn-secondary mx-1" %>
+  </div>
+
+</div>

@@ -1,0 +1,34 @@
+<p id="notice"><%= notice %></p>
+
+<p class="row justify-content-center profile_list">
+  <strong class="col-3 offset-2 profile_label">Email</strong>
+  <span class="col-7">
+    <%= @profile.user.email %>
+  </span>
+</p>
+
+<p class="row justify-content-center profile_list">
+  <strong class="col-3 offset-2 profile_label">Username</strong>
+  <span class="col-7">
+    <%= @profile.username %>
+  </span>
+</p>
+
+<p class="row justify-content-center profile_list">
+  <strong class="col-3 offset-2 profile_label">프로필 이미지</strong>
+  <span class="col-7">
+    <% if @profile.pf_image.url %>
+      <img src="<%= @profile.pf_image.thumb.url %>" alt="profile image">
+    <% else %>
+      <span>이미지없음</span>  
+    <% end %>
+  </span>
+</p>
+
+<p class="row justify-content-center profile_list">
+  <strong class="col-3 offset-2 offset-md-2 profile_label">전화번호</strong>
+  <span class="col-7">
+    <%= @profile.number %>
+  </span>
+</p>
+

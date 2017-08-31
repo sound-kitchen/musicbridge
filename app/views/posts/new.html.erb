@@ -1,0 +1,13 @@
+<div class="container">
+
+  <header class="new_post_header p-4">
+    <h1 class="new_post_title">의뢰하기</h1>
+  </header>
+  
+  
+  <%= render 'form', post: @post %>
+  
+  <div class="row justify-content-end">
+    <%= link_to 'Back', posts_path, class: "btn btn-secondary" %>
+  </div>
+</div>

@@ -1,0 +1,45 @@
+<div class="container">
+  <div class="portfolio-head clearfix">
+    <h1 id="portfolio-title">포트폴리오</h1>
+    <hr class="hr-portfolio float-both">
+  </div>
+  
+  <div class="portfolio-body clearfix"> 
+    <p>
+      <% if @profile.pf_image.url %>
+        <img src="<%= @profile.pf_image.url %>" alt="profile image" class="profile-thumbnail" >
+      <% else %>
+        <span>이미지없음</span>  
+      <% end %>
+    </p>
+    
+    <p>
+      <strong>아티스트명:</strong>
+      <%= @profile.username %>
+    </p>
+
+    <p>
+      <strong>한줄 소개:</strong>
+      <%= @portfolio.title %>
+    </p>
+    
+    <p>
+      <strong>나의 소개:</strong>
+      <%= @portfolio.content %>
+    </p>
+    
+    <p>
+      <strong>링크:</strong>
+      <%= @portfolio.link %>
+    </p>
+    
+    <p>
+      <strong>이메일:</strong>
+      <%= @portfolio.user.email %>
+    </p>
+  </div>  
+  
+  
+  <%= link_to 'Edit', edit_portfolio_path(@portfolio) %> |
+  <%= link_to 'Back', user_show_path %>
+</div>

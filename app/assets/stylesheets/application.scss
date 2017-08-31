@@ -1,0 +1,657 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or any plugin's vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any styles
+ * defined in the other CSS/SCSS files in this directory. It is generally better to create a new
+ * file per style scope.
+ *
+ *= require_tree .
+ *= require_self
+ */
+
+
+
+html {
+    font-size: 16px; //1rem
+}
+
+
+@font-face {
+
+    font-family:'NanumGothic';
+
+    src: url('images/NanumGothic.eot');
+
+    src: url('images/NanumGothic.eot?#iefix') format('embedded-opentype'),
+
+         url('images/NanumGothic.woff') format('woff'),
+
+         url('images/NanumGothic.ttf') format('truetype');
+
+    font-weight: normal;
+
+    font-style: normal;
+
+}
+
+
+// Extra small devices (portrait phones, less than 576px)
+@media (max-width: 575px) {
+    
+}
+
+// Small devices (landscape phones, less than 768px)
+@media (max-width: 767px) {
+    
+}
+
+// Medium devices (tablets, less than 992px)
+@media (max-width: 991px) {
+    
+}
+
+// Large devices (desktops, less than 1200px)
+@media (max-width: 1199px) {
+    
+}
+
+.navbar-toggler {
+    border: none;
+    line-height: 2.8;
+}
+
+.navbar-inverse .navbar-toggle .icon-bar {
+    background-color: white !important;
+}
+.navbar-toggler:focus {
+    outline: none;
+}
+.btn-outline-primary, a.nav-link {
+    float: right;
+    margin-right: 6px;
+    border-color: white;
+    border-radius: 10px;
+    background-color: rgba(50,50,50,0.5);
+    width: 120px;
+    text-align: center;
+    font-size: 1rem;
+    height: 40px;
+    color: white;
+    border-width: 0px;
+}
+
+.btn-outline-primary:hover, a.nav-link:hover {
+    background-color: rgba(255,255,255,0.9);
+    border-color: white;
+    border-radius: 10px;
+    color: black !important;
+    cursor: pointer;
+    border-color: white;
+    border-width: 0px;
+}
+
+nav.navbar {
+    // float: left;
+    z-index: 10000;
+    // background-color: rgba(255,255,255,0.1);
+    line-height: 2.8;
+    width: 100%;
+    // height: 65px;
+}
+.another{
+    background-color: rgb(5,5,15);
+}
+
+.index{
+    float: left;
+    background-color: rgba(255,255,255,0.1);
+}
+
+nav.nav-link {
+    font-size: 0.75rem;
+}
+.logo_img {
+    width: 60px;
+}
+
+
+.category-box{
+    background-color: rgb(255,255,255);
+    margin: 0px 0px 0px 0px;
+    // height: 400px;
+}
+
+
+
+.photowall {
+}
+
+.photowall1, .photowall2 {
+    width: 100%;
+    // padding-bottom: 30%;  //임의로 지정
+    height: 420px;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.photowall1 {
+    background: url("http://blogfiles.naver.net/MjAxNzA4MThfMjYw/MDAxNTAzMDUwNDE2NTYx.ruDyt88-v8xwCcvI9MEcsyWCaTfyRlsfL12AQI6m1ikg.1k-z2exrayH_BNWQvl5A5eM3BWjQlUEvkDwmP9peVYog.JPEG.sound-kitchen/2015-09-18-5-tips-successful-music-producer-01-1280x720.jpg") center center;
+}
+
+.photowall2 {
+    background: url("http://postfiles14.naver.net/MjAxNzA4MTdfMjgy/MDAxNTAyOTcwNTU3MDY5.boQnaj_2zOFQ7ai3_s54GdZhyf170abJU6BsDHXwHNUg.Jgui0Z_1xDloZKZLguAu2oC_CId8swpLL47zmLhHz2gg.JPEG.sound-kitchen/guitar-1180744_960_720.jpg?type=w3") no-repeat center center;
+}
+
+h2#main-title1 {
+    color: white;
+    padding-top: 170px;
+    text-shadow: 0.1em 0.1em 0.15em #333;     
+    text-align: center;
+    font-size: 3rem;
+    font-family: 'NanumGothic', '나눔고딕','NanumGothicWeb', '맑은 고딕', 'Malgun Gothic', Dotum;
+}
+
+.popular-category, .popular-portfolio {
+    text-align: center;
+    padding: 10px 0px;
+    margin-bottom: 0px;
+    font-size: 1.5rem;
+    font-weight: 600;
+    font-family: 'NanumGothic', '나눔고딕','NanumGothicWeb', '맑은 고딕', 'Malgun Gothic', Dotum;
+}
+
+#popular-hr {
+    width: 40px;
+    height: 5px;
+    border: 0;
+    border-radius: 1px;
+    box-shadow: 0 10px 10px -10px #aaa inset;
+    background-color: rgb(5,5,15);
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+
+
+#carouselExampleControls {
+    align-content: center;
+}
+
+
+
+ul{
+    list-style: none;
+}
+
+
+
+
+.btn.btn-secondary {
+    width: relative;
+    height: 40px;
+}
+
+.btn_post {
+    text-align: center;
+    width: 100%;
+    background-color: rgba(245,245,245,0.2);
+    padding: 5px 0px;
+    float: left;
+    display: inline;
+}
+
+
+i.fa.fa-sign-in {
+    font-size: 1rem !important;
+}
+
+
+p.alert {
+    float: left;
+}
+
+.carousel-inner {
+    float: both;
+}
+
+.category0, .category1, .category2, .category3, .category4, .category5, .category6, .category7, .category8, .category9 {
+    // width: 225px;
+    // height: 150px;
+    // line-height: 4;
+    width: 100%;
+    height: auto;
+    background-repeat: no-repeat;
+    background-color: rgb(5,5,15);
+    background-size: cover;
+    border-width: 0px;
+}
+
+#spancategory {
+    font-size: 1.8rem;
+    text-align: center;
+    color: white;
+    text-shadow: 0.1em 0.1em 0.15em #333;     
+}
+
+@media screen and (min-width: 768px) and (max-width: 1199px) {
+  #spancategory {
+    font-size: 1rem;
+  }
+}
+
+
+.genre_card{
+    text-align: center;
+    border-radius: 40px;
+}
+
+.genre_card:hover {
+    cursor: pointer;
+}
+
+.category0 {
+}
+
+.category1 {
+    background-image: url("http://postfiles9.naver.net/MjAxNzA4MThfMjE2/MDAxNTAzMDQ2MDkzMzg3.iyNGb-dI1MqSzymor08xh0HGRQfJKoVe5aruYyaJwqcg.vBjNVWHLtaJAEarn1FHDWyFytIRQVxdLb32lrMl7yRkg.JPEG.sound-kitchen/movie.jpg?type=w3")
+}
+.category1:hover {
+    background-image: linear-gradient(to bottom, rgba(0,0,0,1) 0%, rgba(0,0,0,1) 100%), url("http://postfiles9.naver.net/MjAxNzA4MThfMjE2/MDAxNTAzMDQ2MDkzMzg3.iyNGb-dI1MqSzymor08xh0HGRQfJKoVe5aruYyaJwqcg.vBjNVWHLtaJAEarn1FHDWyFytIRQVxdLb32lrMl7yRkg.JPEG.sound-kitchen/movie.jpg?type=w3")
+}
+ 
+.category2 {
+    background-image: url("http://postfiles4.naver.net/MjAxNzA4MThfMTEy/MDAxNTAzMDQ2MDkzODAx.eseV56lB2NJLzkcollxtRHbxLLCZ-kJH9xDT3OdXGYgg.SXDPZr5V-SvllhgF7AoxJqVKT8msH4IN8IS-Caz--qAg.JPEG.sound-kitchen/video.jpg?type=w3")
+}
+.category2:hover {
+    background-image: linear-gradient(to bottom, rgba(0,0,0,1) 0%, rgba(0,0,0,1) 100%), url("http://postfiles4.naver.net/MjAxNzA4MThfMTEy/MDAxNTAzMDQ2MDkzODAx.eseV56lB2NJLzkcollxtRHbxLLCZ-kJH9xDT3OdXGYgg.SXDPZr5V-SvllhgF7AoxJqVKT8msH4IN8IS-Caz--qAg.JPEG.sound-kitchen/video.jpg?type=w3")
+} 
+
+.category3 {
+    background-image: url("http://postfiles16.naver.net/MjAxNzA4MThfMjI1/MDAxNTAzMDQ2MDk0MjUx.7HhhYjiNDvg-z3Vio_UVIFgwvamsp2UBfIGVgL_gqwwg.Xe-4G7EBY5TanoOT14sAU-T_yJr9jnl1xYcerbiEKWkg.JPEG.sound-kitchen/game.jpg?type=w3")
+}
+.category3:hover {
+    background-image: linear-gradient(to bottom, rgba(0,0,0,1) 0%, rgba(0,0,0,1) 100%), url("http://postfiles16.naver.net/MjAxNzA4MThfMjI1/MDAxNTAzMDQ2MDk0MjUx.7HhhYjiNDvg-z3Vio_UVIFgwvamsp2UBfIGVgL_gqwwg.Xe-4G7EBY5TanoOT14sAU-T_yJr9jnl1xYcerbiEKWkg.JPEG.sound-kitchen/game.jpg?type=w3")
+}
+ 
+.category4 {
+    background-image: url("http://postfiles6.naver.net/MjAxNzA4MThfODUg/MDAxNTAzMDQ2MDk0NjE3.yZFMdvsRRqKdX4vUpWJ7tksrwlj_gvtwJAW72eBdZ1Ug.0mGes96cEDavty63A8nGY6DU6rNeUrnHPoAP249DCawg.JPEG.sound-kitchen/hiphopedm.jpg?type=w3")
+}
+.category4:hover {
+    background-image: linear-gradient(to bottom, rgba(0,0,0,1) 0%, rgba(0,0,0,1) 100%), url("http://postfiles6.naver.net/MjAxNzA4MThfODUg/MDAxNTAzMDQ2MDk0NjE3.yZFMdvsRRqKdX4vUpWJ7tksrwlj_gvtwJAW72eBdZ1Ug.0mGes96cEDavty63A8nGY6DU6rNeUrnHPoAP249DCawg.JPEG.sound-kitchen/hiphopedm.jpg?type=w3")
+}
+ 
+.category5 {
+    background-image: url("http://postfiles10.naver.net/MjAxNzA4MThfMjQ2/MDAxNTAzMDQ2MDk1MTEw.vXuXtDkY0Myz1LOWRhWh4ifRChqyvsLo0zbj72C4UVsg.fNyVt3tQR7GyBFu7vNAldxHHEsSvYfO9kxffRnjYJAMg.JPEG.sound-kitchen/pop.jpg?type=w3")
+}
+.category5:hover {
+    background-image: linear-gradient(to bottom, rgba(0,0,0,1) 0%, rgba(0,0,0,1) 100%), url("http://postfiles10.naver.net/MjAxNzA4MThfMjQ2/MDAxNTAzMDQ2MDk1MTEw.vXuXtDkY0Myz1LOWRhWh4ifRChqyvsLo0zbj72C4UVsg.fNyVt3tQR7GyBFu7vNAldxHHEsSvYfO9kxffRnjYJAMg.JPEG.sound-kitchen/pop.jpg?type=w3")
+}
+ 
+.category6 {
+    background-image: url("http://postfiles3.naver.net/MjAxNzA4MThfMjA4/MDAxNTAzMDQ2MDk1MzYy.OzbblehIpN7RuYjjt4hZNwFrYfjO9iGy67a3Q_VWFSAg.nzCOuRhpCZe_ynQZrZ2AmMK9QCyA5vyfyvi7fM2AQJwg.JPEG.sound-kitchen/play.jpg?type=w3")
+}
+.category6:hover {
+    background-image: linear-gradient(to bottom, rgba(0,0,0,1) 0%, rgba(0,0,0,1) 100%), url("http://postfiles3.naver.net/MjAxNzA4MThfMjA4/MDAxNTAzMDQ2MDk1MzYy.OzbblehIpN7RuYjjt4hZNwFrYfjO9iGy67a3Q_VWFSAg.nzCOuRhpCZe_ynQZrZ2AmMK9QCyA5vyfyvi7fM2AQJwg.JPEG.sound-kitchen/play.jpg?type=w3")
+} 
+
+.category7 {
+    background-image: url("http://postfiles11.naver.net/MjAxNzA4MThfMjQ2/MDAxNTAzMDQ2MDk1NjQ1.ujKeCutOnnAWO_6zQz8BUyy8AYtQ5EURle4UIq0BhDwg.Z6YF6YJ0hCfGHMNPD2UBR_WorIMzWX-DLPNuJMsAc8Qg.JPEG.sound-kitchen/pray.jpg?type=w3")
+}
+.category7:hover {
+    background-image: linear-gradient(to bottom, rgba(0,0,0,1) 0%, rgba(0,0,0,1) 100%), url("http://postfiles11.naver.net/MjAxNzA4MThfMjQ2/MDAxNTAzMDQ2MDk1NjQ1.ujKeCutOnnAWO_6zQz8BUyy8AYtQ5EURle4UIq0BhDwg.Z6YF6YJ0hCfGHMNPD2UBR_WorIMzWX-DLPNuJMsAc8Qg.JPEG.sound-kitchen/pray.jpg?type=w3")
+}
+
+.category8 {
+    background-image: url("http://postfiles10.naver.net/MjAxNzA4MThfMTQ1/MDAxNTAzMDQ2MDk1OTMw.l6JpG7utsixY-91Muz0_CpEeGyII3gdUei04yK8XdXYg.uLjp-nlno6WQ-4AtmTTOEnN8woJCxROjNpHz30yaF08g.JPEG.sound-kitchen/mix.jpg?type=w3")
+}
+.category8:hover {
+    background-image: linear-gradient(to bottom, rgba(0,0,0,1) 0%, rgba(0,0,0,1) 100%), url("http://postfiles10.naver.net/MjAxNzA4MThfMTQ1/MDAxNTAzMDQ2MDk1OTMw.l6JpG7utsixY-91Muz0_CpEeGyII3gdUei04yK8XdXYg.uLjp-nlno6WQ-4AtmTTOEnN8woJCxROjNpHz30yaF08g.JPEG.sound-kitchen/mix.jpg?type=w3")
+}
+ 
+.category9 {
+    background-image: url("http://postfiles13.naver.net/MjAxNzA4MThfMTY3/MDAxNTAzMDQ2MDk2MjY0.j55BhgHd3j-ZIrMTIQBsAGpm_vxUAOYL8NBQkk1huPgg.eq3XklCeNixBwH44lb7nPQybYWmUXkAPyAVaq3mrHIIg.JPEG.sound-kitchen/session.jpg?type=w3")
+}
+.category9:hover {
+    background-image: linear-gradient(to bottom, rgba(0,0,0,1) 0%, rgba(0,0,0,1) 100%), url("http://postfiles13.naver.net/MjAxNzA4MThfMTY3/MDAxNTAzMDQ2MDk2MjY0.j55BhgHd3j-ZIrMTIQBsAGpm_vxUAOYL8NBQkk1huPgg.eq3XklCeNixBwH44lb7nPQybYWmUXkAPyAVaq3mrHIIg.JPEG.sound-kitchen/session.jpg?type=w3")
+}
+
+.category9:before, .category9:after {
+    content: " ";
+    clear: both;
+    display: block;
+}
+ 
+.navbar:before, .navbar:after {
+    content: " ";
+    clear: both;
+    display: block;
+}
+
+.category-box:before .category-box:after {
+    content: " ";
+    clear: both;
+    display: block;
+}
+
+
+
+.portfolio-box{
+    background-color: rgb(255,245,245);
+}
+
+.card {
+    text-align: center;
+}
+
+.card-title {
+    font-size: 2rem;
+    font-weight: 700;
+    line-height: 1.2;
+}
+
+.card-text {
+    text-align: left;
+}
+
+.card-img_container {
+    height: 250px;
+    overflow: hidden;
+}
+
+.card-img_container:hover .card-img-top {
+    transform: scale(1.2);
+}
+
+.card-img-top {
+    width: 100%;
+    height: auto;
+    overflow: hidden;
+    transition: all 0.2s ease-in-out;
+}
+
+p#space {
+    color: rgba(0,0,0,0);
+}
+
+#nav-btn {
+    color: black;
+}
+
+#nav-btn:hover {
+    color: gray;
+}
+
+.modal-content {
+    width: 400px;
+}
+
+p#modaling {
+    font-size: 2rem;
+    text-align: center;
+    color: rgb(5,5,15);
+    margin-bottom: 0px;
+}
+
+label.email, label.password {
+    width: 80px;
+}
+
+input#user_email, input#user_password {
+    width: 240px;    
+}
+
+
+
+
+
+
+
+
+
+
+
+
+////////////// post index CSS /////////////////
+.post_title {
+    // font-size: 1rem;
+    font-weight: 700;
+}
+
+.post_bg {// 임시
+    background-color: rgb(235,235,255); 
+    width: 90%;
+    
+
+}
+
+.post_table {
+    font-size: 1rem;
+}
+@media screen and (max-width: 575px){
+  .post_table {
+    font-size: 0.5rem;
+  }
+}
+@media screen and (min-width: 576px) and (max-width: 767px){
+    // (min-width: 768px) and (max-width: 1199px) 
+  .post_table {
+    font-size: 0.75rem;
+  }
+}
+
+
+.post-thead {
+    text-align: center;
+    // font-size: 1rem;
+    font-family: 'NanumGothic';
+}
+
+.new_post_header {
+    text-align: center;
+}
+.new_post_title {
+    font-weight: 700;
+}
+
+
+
+.btn-primary.more {
+    font-size: 1.2rem;
+    width: 200px;
+    border-radius: 20px;
+    background-color: rgb(51, 153, 51);
+    border-width: 0px;
+    height: 40px;
+    margin-bottom: 16px;
+}
+
+.btn-primary.more:hover {
+    cursor: pointer;
+    background-color: rgb(51, 153, 102);
+}
+
+.post_form {
+    text-align: right;
+}
+
+.post_form_label {
+    font-size: 1rem;
+    font-weight: 700;
+    line-height: 1.5;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+}
+
+// .btn_submit
+
+
+
+
+
+//////////////top buton//////////////
+#myBtn {
+    display: none; /* Hidden by default */
+    position: fixed; /* Fixed/sticky position */
+    bottom: 20px; /* Place the button at the bottom of the page */
+    right: 30px; /* Place the button 30px from the right */
+    z-index: 99; /* Make sure it does not overlap */
+    border: none; /* Remove borders */
+    outline: none; /* Remove outline */
+    background-color: rgb(51, 153, 51); /* Set a background color */
+    color: white; /* Text color */
+    cursor: pointer; /* Add a mouse pointer on hover */
+    padding: 6px 16px; /* Some padding */
+    border-radius: 20px; /* Rounded corners */
+}
+
+#myBtn:hover {
+    background-color: #555; /* Add a dark-grey background on hover */
+}
+
+
+/////////footer///////
+
+.footer-box {
+    background-color: rgb(15,15,25);
+    color: white;
+    font-family: 'NanumGothic';
+}
+
+.footer-btn {
+    color: white;
+    margin-right: 10px;
+    font-size: 1rem;
+}
+
+.footer-btn:hover {
+    cursor: pointer;
+}
+
+.badge {
+    margin-bottom: 6px;
+}
+
+/////////////portfolio////////////
+
+.port_title {
+    font-weight: 700;
+}
+
+
+.portfolio-head {
+    text-align: center;
+}
+
+.hr-portfolio {
+    width: 10%;
+    background-color: rgb(5,5,5);
+    height: 3px;
+    border-radius: 5px;
+    padding: 0px;
+    margin: 0px;
+}
+
+#portfolio-title {
+    margin-top: 10px;
+    font-family: 'Jeju Myeongjo';
+    font-weight: 700;
+}
+
+.portfolio-body {
+    margin-top: 10px;
+    font-size: 1.2rem;
+}
+
+.portfolio-text .portfolio-btn {
+    font-size: 1.2rem;
+    font-family: 'Jeju Myeongjo';
+}
+
+@media screen and (max-width: 575px){
+  .portfolio-text .portfolio-btn {
+    font-size: 0.7rem;
+  }
+}
+@media screen and (min-width: 576px) and (max-width: 767px){
+    // (min-width: 768px) and (max-width: 1199px) 
+  .portfolio-text .portfolio-btn {
+    font-size: 0.9rem;
+  }
+}
+
+
+
+.new_port_header,
+.edit_port_header{
+    text-align: center;
+}
+.new_port_title,
+.edit_port_title{
+    font-weight: 700;
+}
+
+.port_form {
+    text-align: right;
+}
+.port_form_label {
+    font-size: 1rem;
+    font-weight: 700;
+    line-height: 1.5;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+}
+
+
+li {
+    list-style-type: none;
+}
+
+.portfolio-btn {
+    background-color: rgb(51, 153, 51);
+    color: white;
+    margin-top: 10px;
+    margin-right: 10px;
+    font-size: 1.5rem;
+    width: 16%;
+    padding: 10px 0px;
+}
+
+
+.portfolio-btn:hover {
+    background-color: rgb(51, 153, 102);
+    cursor: pointer;
+}
+
+
+
+
+//////////////////// profile //////////////
+
+
+// .profile_list {
+//     text-align: right;
+// }
+.profile_label {
+    font-size: 1rem;
+    font-weight: 700;
+    line-height: 1.5;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+}
+
+.profile-thumbnail {
+    width: 300px;
+    height: 300px;
+    background-size: cover;
+}
+
+//////////////////////////////////////
+.sign_up_form{
+    flex-grow: 1;
+}
+

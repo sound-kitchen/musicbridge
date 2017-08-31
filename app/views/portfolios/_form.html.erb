@@ -1,0 +1,37 @@
+<%= form_for(portfolio) do |f| %>
+  <% if portfolio.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(portfolio.errors.count, "error") %> prohibited this portfolio from being saved:</h2>
+
+      <ul>
+      <% portfolio.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field form-group row justify-content-center port_form">
+    <%= f.label :title, class: "col-3 col-md-2 col-form-label port_form_label" %>
+    <%= f.text_field :title, class: "col-9 col-md-10 form-control" %>
+  </div>
+
+  <div class="field form-group row justify-content-center port_form">
+    <%= f.label :content, class: "col-3 col-md-2 col-form-label port_form_label" %>
+    <%= f.text_field :content, class: "col-9 col-md-10 form-control" %>
+  </div>
+
+  <div class="field form-group row justify-content-center port_form">
+    <%= f.label :link, class: "col-3 col-md-2 col-form-label port_form_label" %>
+    <%= f.text_field :link, class: "col-9 col-md-10 form-control" %>
+  </div>
+  
+  <div class="field">
+    <%= f.label :mp3 %>
+    <%= f.file_field :mp3 %>
+  </div>
+
+  <div class="actions row justify-content-center">
+    <%= f.submit %>
+  </div>
+<% end %>

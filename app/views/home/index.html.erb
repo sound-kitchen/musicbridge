@@ -1,0 +1,208 @@
+<!--<div class="container-fluid">-->
+<% if user_signed_in? %>
+    <% if current_user.profile.username.nil? %>
+        <h1>내 프로필</h1>
+
+        <%= form_for(@profile) do |f| %>
+          <% if @profile.errors.any? %>
+            <div id="error_explanation">
+              <h2><%= pluralize(@profile.errors.count, "error") %> prohibited this profile from being saved:</h2>
+        
+              <ul>
+              <% @profile.errors.full_messages.each do |message| %>
+                <li><%= message %></li>
+              <% end %>
+              </ul>
+            </div>
+          <% end %>
+        
+          <div class="field">
+            <%= f.label :username %>
+            <%= f.text_field :username %>
+          </div>
+        
+          <div class="field">
+            <%= f.label :pf_image %>
+            <%= f.text_field :pf_image %>
+          </div>
+        
+          <div class="field">
+            <%= f.label :number %>
+            <%= f.text_field :number %>
+          </div>
+        
+          <div class="actions">
+            <%= f.submit %>
+          </div>
+        <% end %>
+
+        
+        <%= link_to 'Show', @profile %> |
+        <%= link_to 'Back', @profile %>
+    <% else %>
+    <% end %>
+<% end %>
+
+<div id="carouselExampleSlidesOnly" class="carousel slide" data-ride="carousel">  
+
+  <div class="photowall">
+    <div class="photowall1">
+        <h2 id="main-title1">지금 당신에게 필요한 제작자를 만나보세요</h2>
+    </div>
+
+
+    <div class="category-box">
+        <div class="container">
+            <p class="popular-category">전체 카테고리</p><hr id="popular-hr">
+                
+            <div class="row justify-content-center">
+             
+            <!--<a href="../posts"> -->
+                <div class="genre_card category0 col-md-2 mx-2 my-2 py-2" onclick="window.location.href='../posts/';">
+                    <span id=spancategory>전체</span>
+                </div>
+                <!--</a>-->
+                <div class="genre_card category1 col-md-2 mx-2 my-2 py-2" onclick="window.location.href='../movie/';">
+                    <span id=spancategory>영화</span>
+                </div>        
+                <div class="genre_card category2 col-md-2 mx-2 my-2 py-2" onclick="window.location.href='../video/';">
+                    <span id=spancategory>영상</span>
+                </div>
+                <div class="genre_card category3 col-md-2 mx-2 my-2 py-2" onclick="window.location.href='../game/';">
+                    <span id=spancategory>게임</span>
+                </div>            
+                <div class="genre_card category4 col-md-2 mx-2 my-2 py-2" onclick="window.location.href='../hiphopedm/';">
+                    <span id=spancategory>힙합/EDM</span>
+                </div>      
+                <div class="genre_card category5 col-md-2 mx-2 my-2 py-2" onclick="window.location.href='../pop/';">
+                    <span id=spancategory>가요</span>
+                </div>      
+                <div class="genre_card category6 col-md-2 mx-2 my-2 py-2" onclick="window.location.href='../stage/';">
+                    <span id=spancategory>공연</span>
+                </div>      
+                <div class="genre_card category7 col-md-2 mx-2 my-2 py-2" onclick="window.location.href='../religious/';">
+                    <span id=spancategory>종교</span>
+                </div>      
+                <div class="genre_card category8 col-md-2 mx-2 my-2 py-2" onclick="window.location.href='../arrangement/';">
+                    <span id=spancategory>편곡</span>
+                </div>       
+                <div class="genre_card category9 col-md-2 mx-2 my-2 py-2" onclick="window.location.href='../session/';">
+                    <span id=spancategory>세션</span>
+                </div> 
+                
+            </div>
+        </div>
+    </div>
+    
+    <div class="portfolio-box">
+        <div class="container">
+            <p class="popular-portfolio">인기 제작자</p><hr id="popular-hr">
+            
+            <div class="cards row py-3">
+                <div class="col-12 col-md-4">
+                    <div class="card mb-3 mb-md-0">
+                        <a href="/portfolios/1" class="card-img_container d-flex justify-content-center align-items center">
+                            <img class="card-img-top" src="<%= User.first.profile.pf_image.url %>" alt>
+                        </a>
+                        <div class="card-block">
+                            <h4 class="card-title mb-2"><%= User.first.profile.username %></h4>
+                            <p class="card-text"><%= User.first.portfolio.title %></p>
+                            <button class="btn btn-secondary"><a href="/portfolios/1">자세히 보기</a></button>
+                        </div>
+                    </div>        
+                </div>
+                <div class="col-12 col-md-4">
+                    <div class="card mb-3 mb-md-0">
+                        <a href="/portfolios/2" class="card-img_container d-flex justify-content-center align-items center">
+                            <img class="card-img-top" src="<%= User.second.profile.pf_image.url %>" alt>
+                        </a>
+                        <div class="card-block">
+                            <h4 class="card-title mb-2"><%= User.second.profile.username %></h4>
+                            <p class="card-text"><%= User.second.portfolio.title %></p>
+                            <button class="btn btn-secondary"><a href="/portfolios/2">자세히 보기</a></button>
+                            <%#= link_to '자세히 보기', portfolio_path, class: "btn btn-secondary" %>
+                        </div>
+                    </div>        
+                </div>
+                <div class="col-12 col-md-4">
+                    <div class="card mb-3 mb-md-0">
+                        <a href="/portfolios/4" class="card-img_container d-flex justify-content-center align-items center">
+                            <!--<img class="card-img-top" src="https://www.ua-magazine.com/wp-content/uploads/2014/09/music.jpg" alt>-->
+                            <img class="card-img-top" src="<%= User.third.profile.pf_image.url %>" alt="profile image">
+                        </a>
+                        <div class="card-block">
+                            <h4 class="card-title mb-2"><%= User.third.profile.username %></h4>
+                            <p class="card-text"><%= User.third.portfolio.title %></p>
+                            <button class="btn btn-secondary"><a href="/portfolios/3">자세히 보기</a></button>
+                        </div>
+                    </div>        
+                </div>
+            </div>
+            
+            <div class="row justify-content-center">
+              <%= link_to portfolios_path do %>
+                <button type="button" class="btn btn-primary more">
+                  <i class="fa fa-users" aria-hidden="true">+ 제작자 더보기</i>
+                </button>
+              <% end %>  
+            </div>          
+        </div>
+    </div>
+
+<div class="footer-box">    
+    <div class="container">
+        <div class="footer p-3">
+            <div class="row">
+                <ul class="col-12 col-md-4 m-0">
+                    <li class="footer-text mb-1">
+                        <%= link_to posts_path do %>
+                            <div class="footer-btn">
+                                <i class="fa fa-globe" aria-hidden="true">&ensp;모든 의뢰</i>             
+                            </div>
+                        <% end %>
+                    </li>
+                    <li class="footer-text">
+                        <%= link_to portfolios_path do %>
+                            <div class="footer-btn">
+                                <i class="fa fa-globe" aria-hidden="true">&ensp;모든 제작자</i>             
+                            </div>
+                        <% end %>
+                    </li>              
+                </ul>
+                <ul class="col-12 col-md-4 m-0">
+                    <li class="footer-text mb-1">
+                        <span class="footer-btn" onclick="window.location.href='../posts/';"> 전체 카테고리 보기</span>
+                    </li>
+                    <li class="footer-text clearfix">
+                        <div class="footer-btn float-left badge badge-pill badge-default" onclick="window.location.href='../movie/';">영화</div>
+                        <div class="footer-btn float-left badge badge-pill badge-default" onclick="window.location.href='../video/';">영상</div>
+                        <div class="footer-btn float-left badge badge-pill badge-default" onclick="window.location.href='../game/';">게임</div>
+                        <div class="footer-btn float-left badge badge-pill badge-default" onclick="window.location.href='../hiphopedm/';">힙합/EDM</div>
+                    </li>
+                    <li class="footer-text clearfix">
+                        <div class="footer-btn float-left badge badge-pill badge-default" onclick="window.location.href='../pop/';">가요</div>
+                        <div class="footer-btn float-left badge badge-pill badge-default" onclick="window.location.href='../stage/';">공연</div>
+                        <div class="footer-btn float-left badge badge-pill badge-default" onclick="window.location.href='../religious/';">종교</div>
+                        <div class="footer-btn float-left badge badge-pill badge-default" onclick="window.location.href='../arrangement/';">편곡</div>
+                        <div class="footer-btn float-left badge badge-pill badge-default" onclick="window.location.href='../session/';">세션</div>
+                    </li>                                        
+                </ul>
+            <!--<p id="footer-text">카테고리</p>-->
+            <!--<p id="footer-text">포트폴리오</p>-->
+                <ul class="col-12 col-md-4 m-0">
+                    <li class="footer-text mb-1"><i class="fa fa-gavel" aria-hidden="true"></i> 
+                        <a href="http://www.gosomi.com/" class="footer-btn">법적고시 더보기</a>
+                    </li>
+                    <li class="footer-text mb-1"><i class="fa fa-envelope" aria-hidden="true"></i> 이메일 sound-kitchen@likelion.org</li>
+                    <li class="footer-text"><i class="fa fa-phone" aria-hidden="true"></i> 연락처 (+82) 010-9357-3454</li>
+                    <!--<p id="footer-text"><i class="fa fa-gavel" aria-hidden="true">법적고시</i></p>-->
+                    <!--<p id="footer-text"><i class="fa fa-envelope" aria-hidden="true">이메일</i></p>-->
+                    <!--<p id="footer-text"><i class="fa fa-phone" aria-hidden="true">연락처</i></p>-->
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<!--</div>-->

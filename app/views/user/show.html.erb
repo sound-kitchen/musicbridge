@@ -1,0 +1,18 @@
+<div class="container">
+  
+  <%= render 'profiles/show', profile: @profile %>
+  
+  <div class="row justify-content-center">
+    <a href="/profile/edit/<%= @profile.id %>" class="btn btn-secondary mx-1">프로필 수정</a>
+  
+  
+    <% if @portfolio.title.nil? %>
+      <%= link_to "제작자 등록", edit_portfolio_path(@portfolio), class: "btn btn-secondary mx-1" %>
+    <% else %>
+      <%= link_to "내 포트폴리오 보기", @portfolio, class: "btn btn-secondary mx-1" %>
+    <% end %>
+  
+    <%= link_to 'Back', root_path, class: "btn btn-secondary mx-1" %>
+  </div>
+
+</div>
